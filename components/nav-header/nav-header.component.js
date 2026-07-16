@@ -1,7 +1,7 @@
 import { useMemo } from "react"
-import Link from "next/link"
 
 import styles from "./nav-header.module.css"
+import NavLink from "../nav-link/nav-link.component"
 
 const navHeaderItems = [
   {
@@ -15,12 +15,13 @@ const navHeaderItems = [
 ]
 
 export default function NavHeader() {
+
   const navLinks = useMemo(() => 
     navHeaderItems.map(
-      ({ href, linkText, i }) => 
-        <Link href={href} key={`${i}-nav`}>
+      ({ href, linkText }, i) => 
+        <NavLink href={href} key={`${i}-nav-link`}>
           {linkText}
-        </Link>
+        </NavLink>
     ), [])
 
   return (
