@@ -1,14 +1,10 @@
 import ImagePicker from '@/components/image-picker';
+
+import { shareMeal } from '@/lib/actions.lib';
+
 import styles from './page.module.css';
 
 export default function ShareMealPage() {
-  const shareMeal = async (formData) => {
-    // a function with this directive will only run on the server
-    'use server';
-
-    const meal = Object.fromEntries(formData);
-  }
-
   return (
     <>
       <header className={styles.header}>
