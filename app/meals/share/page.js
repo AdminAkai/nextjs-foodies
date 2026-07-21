@@ -1,3 +1,4 @@
+import ShareFormButton from '@/components/share-form-button';
 import ImagePicker from '@/components/image-picker';
 
 import { shareMeal } from '@/lib/actions.lib';
@@ -38,14 +39,12 @@ export default function ShareMealPage() {
             <textarea
               id="instructions"
               name="instructions"
-              rows="10"
+              rows="9"
               required
             ></textarea>
           </p>
           <ImagePicker label="Meal Image" name="image" />
-          <p className={styles.actions}>
-            <button type="submit">Share Meal</button>
-          </p>
+            <ShareFormButton />
         </form>
       </main>
     </>
