@@ -5,7 +5,7 @@ import { useMemo } from "react"
 import styles from "./meals-grid.module.css"
 import MealItem from "../meal-item";
 
-export default function MealsGrid({ meals }) {
+const MealsGrid = ({ meals }) => {
   const mealListItems = useMemo(
     () => 
       meals.map(meal => (
@@ -20,3 +20,5 @@ export default function MealsGrid({ meals }) {
     </ul>
   )
 }
+
+export default MealsGrid

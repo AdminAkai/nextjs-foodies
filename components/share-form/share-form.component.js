@@ -5,9 +5,11 @@ import { useActionState } from 'react';
 import ImagePicker from "../image-picker"
 import ShareFormButton from "../share-form-button"
 
+import { shareMeal } from '@/lib/actions.lib';
+
 import styles from './share-form.module.css'
 
-export default function ShareForm() {
+const ShareForm = () => {
   const [formState, formAction] = useActionState(shareMeal, { message: null })
 
   return (
@@ -45,3 +47,5 @@ export default function ShareForm() {
     </form>
   )
 }
+
+export default ShareForm

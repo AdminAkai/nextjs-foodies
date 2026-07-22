@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 
 import styles from './nav-link.module.css'
 
-export default function NavLink({ href, children }) {
+const NavLink = ({ href, children }) => {
   const path = usePathname();
 
   return (
@@ -17,3 +17,5 @@ export default function NavLink({ href, children }) {
     </Link>
   )
 }
+
+export default NavLink

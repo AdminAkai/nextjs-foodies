@@ -4,7 +4,7 @@ import { useFormStatus } from 'react-dom';
 
 import styles from './share-form-button.module.css'
 
-export default function ShareFormButton() {
+const ShareFormButton = () => {
   const { pending } = useFormStatus()
 
   return (
@@ -13,3 +13,5 @@ export default function ShareFormButton() {
     </p>
   )
 }
+
+export default ShareFormButton

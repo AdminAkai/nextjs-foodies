@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import styles from './image-picker.module.css'
 
-export default function ImagePicker({ label, name }) {
+const ImagePicker = ({ label, name }) => {
   const imageInputRef = useRef(null);
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -60,3 +60,5 @@ export default function ImagePicker({ label, name }) {
     </div>
   )
 }
+
+export default ImagePicker

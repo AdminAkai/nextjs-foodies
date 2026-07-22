@@ -16,7 +16,7 @@ const navHeaderItems = [
   }
 ]
 
-export default function NavHeader() {
+const NavHeader = () => {
 
   const navLinks = useMemo(() => 
     navHeaderItems.map(
@@ -34,3 +34,5 @@ export default function NavHeader() {
     </nav>
   )
 }
+
+export default NavHeader

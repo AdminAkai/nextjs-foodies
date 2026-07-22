@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import { getMeal } from '@/lib/meals.lib'
 
-export default function MealPage({ params }) {
+const MealPage = ({ params }) => {
   // the folder name for the subroute is the param here, meal = id of the meal
   const { title, creator, image, creator_email, summary, instructions } = getMeal(params.meal)
 
@@ -30,3 +30,5 @@ export default function MealPage({ params }) {
     </>
   )
 }
+
+export default MealPage
