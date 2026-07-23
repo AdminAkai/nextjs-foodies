@@ -7,6 +7,20 @@ import { imageSizes } from '@/lib/constants.lib'
 
 import styles from './page.module.css'
 
+export const generateMetadata = async ({ params }) => {
+  try {
+    const { meal } = await params
+    const { title , summary } = getMeal(meal)
+
+    return {
+      title: title,
+      description: summary
+    }
+  } catch(err) {
+    notFound();
+  }
+}
+
 const MealPage = ({ params }) => {
   // the folder name for the subroute is the param here, meal = id of the meal
   const { meal } = use(params)

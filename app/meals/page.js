@@ -5,6 +5,11 @@ import { getMeals } from '@/lib/meals.lib'
 import { Suspense } from 'react'
 import MealsLoading from '@/components/meals-loading'
 
+export const metadata = {
+  title: 'All Meals',
+  description: 'Browse delicious meals shared by our vibrant community.',
+};
+
 const Meals = async () => {
   // simulating asynchronous data fetch here to leverage NextJS backend capabilities
   const meals = await getMeals();
