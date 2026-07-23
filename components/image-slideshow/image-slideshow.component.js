@@ -10,6 +10,9 @@ import macncheeseImg from '@/assets/macncheese.jpg';
 import pizzaImg from '@/assets/pizza.jpg';
 import schnitzelImg from '@/assets/schnitzel.jpg';
 import tomatoSaladImg from '@/assets/tomato-salad.jpg';
+
+import { imageSizes } from '@/lib/constants.lib';
+
 import styles from './image-slideshow.module.css';
 
 const images = [
@@ -43,6 +46,8 @@ const ImageSlideshow = () => {
           src={image.image}
           className={index === currentImageIndex ? styles.active : ''}
           alt={image.alt}
+          fill
+          sizes={imageSizes}
         />
       ))}
     </div>

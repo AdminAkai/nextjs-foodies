@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { imageSizes } from '@/lib/constants.lib';
+
 import styles from './meal-item.module.css';
 
 const MealItem = ({ title, slug, image, summary, creator }) => (
   <article className={styles.meal}>
     <header>
       <div className={styles.image}>
-        <Image src={image} alt={title} fill />
+        <Image src={image} alt={title} fill sizes={imageSizes} />
       </div>
       <div className={styles.headerText}>
         <h2>{title}</h2>
